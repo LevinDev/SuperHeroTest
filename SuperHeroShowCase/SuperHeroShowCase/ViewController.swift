@@ -6,12 +6,18 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
+    
+    let bag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        NetworkManager.shared.fetchPopularMovies(page: "1")
+            .subscribe(onNext: { result in
+                print(result.results.count)
+            }).disposed(by: bag)
     }
 
 
