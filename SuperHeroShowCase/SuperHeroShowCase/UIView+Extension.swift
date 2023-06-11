@@ -66,3 +66,31 @@ extension UITextField{
         }
     }
 }
+
+import Lottie
+
+extension UIView{
+
+    func showLoader(backgroundColor: UIColor = .clear) {
+        let backgroundView = UIView()
+        backgroundView.frame = CGRect.init(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
+        backgroundView.backgroundColor = backgroundColor
+        backgroundView.tag = 475647
+        let animationView = LottieAnimationView.init(name: "BatmanWhite")
+        animationView.frame = self.bounds
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.animationSpeed = 0.9
+        backgroundView.addSubview(animationView)
+        animationView.play()
+        self.addSubview(backgroundView)
+        self.bringSubviewToFront(backgroundView)
+    }
+
+    func hideLoader() {
+        if let background = viewWithTag(475647){
+            background.removeFromSuperview()
+        }
+        self.isUserInteractionEnabled = true
+    }
+}

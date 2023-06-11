@@ -18,11 +18,15 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet private var descriptionlabel: UILabel!
     @IBOutlet private var shuffleBtn: UIButton!
     
-    var viewModel:HomeViewModel!
+    var viewModel: MovieViewModel!
     let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindViewModel()
+    }
+    
+    private func bindViewModel() {
         viewModel.randomSelectedMovie
             .subscribe(onNext: { [weak self] movie in
                 guard let selectedMovie = movie else {return}
@@ -35,7 +39,6 @@ class MovieDetailViewController: UIViewController {
                     self.viewModel.randomSelectedMovie.accept(newRandom)
                 }
             }).disposed(by: bag)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

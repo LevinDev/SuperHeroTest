@@ -10,16 +10,16 @@ import SwinjectStoryboard
 
 extension SwinjectStoryboard {
     @objc class func setup() {
-        let homeViewModel = HomeViewModel()
+        let homeViewModel = MovieViewModel()
         defaultContainer.storyboardInitCompleted(ViewController.self) { r, c in
-            c.viewModel = r.resolve(HomeViewModel.self)
+            c.viewModel = r.resolve(MovieViewModel.self)
         }
         defaultContainer.storyboardInitCompleted(HeroViewController.self) { r, c in
-            c.viewModel = r.resolve(HomeViewModel.self)
+            c.viewModel = r.resolve(MovieViewModel.self)
         }
         defaultContainer.storyboardInitCompleted(MovieDetailViewController.self) { r, c in
-            c.viewModel = r.resolve(HomeViewModel.self)
+            c.viewModel = r.resolve(MovieViewModel.self)
         }
-        defaultContainer.register(HomeViewModel.self) { _ in homeViewModel }
+        defaultContainer.register(MovieViewModel.self) { _ in homeViewModel }
     }
 }
