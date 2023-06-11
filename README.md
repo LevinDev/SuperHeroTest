@@ -3,7 +3,7 @@
 This application follows MVVM software design pattern and is built with [RX swift framework](https://github.com/ReactiveX/RxSwift).
 
 <p align="center">
-  <img src="screenshots/demo.gif">
+  <img src="demo.gif">
 </p>
 
 ## Requirments
