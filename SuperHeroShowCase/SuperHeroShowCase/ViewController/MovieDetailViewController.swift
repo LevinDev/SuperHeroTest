@@ -50,8 +50,10 @@ class MovieDetailViewController: UIViewController {
         self.posterImageView.kf.setImage(with: movie.posterURL!) { reult in
             
         }
-        self.backdropImageView.kf.setImage(with: movie.backgroundURL!) { reult in
-            
+        if let background = movie.backgroundURL {
+            self.backdropImageView.kf.setImage(with: background) { reult in
+                
+            }
         }
         titlelabel.text = movie.title
         descriptionlabel.text = movie.overview

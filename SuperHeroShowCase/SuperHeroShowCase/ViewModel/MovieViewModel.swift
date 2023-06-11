@@ -10,6 +10,11 @@ import RxSwift
 import RxRelay
 
 class MovieViewModel {
+    let service:MovieService
+    
+    init(service: MovieService) {
+        self.service = service
+    }
     
     var movies = BehaviorRelay<[movie]>(value: [])
     var randomSelectedMovie = BehaviorRelay<movie?>(value: .none)
@@ -17,9 +22,9 @@ class MovieViewModel {
     
     func fetchSuperHeroMovies() {
         self.loader.accept(true)
-      let pageOne = NetworkManager.shared.fetchPopularMovies(page: "1")
-      let pageTwo = NetworkManager.shared.fetchPopularMovies(page: "2")
-      let pageThree = NetworkManager.shared.fetchPopularMovies(page: "3")
+      let pageOne = service.fetchPopularMovies(page: "1")
+      let pageTwo = service.fetchPopularMovies(page: "2")
+      let pageThree = service.fetchPopularMovies(page: "3")
       
     _ = Observable.zip(pageOne, pageTwo, pageThree){ ($0, $1, $2) }.subscribe { (one, two, three) in
           var allMovies = [movie]()

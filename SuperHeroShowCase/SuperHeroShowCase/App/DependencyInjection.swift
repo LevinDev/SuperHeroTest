@@ -7,10 +7,15 @@
 
 import Foundation
 import SwinjectStoryboard
+import Moya
 
 extension SwinjectStoryboard {
     @objc class func setup() {
-        let homeViewModel = MovieViewModel()
+        let provider = MoyaProvider<API>(
+            endpointClosure: endPointMyOrganizationClousre,
+            plugins: [authMyOrganizationPlugin, NetworkLoggerPlugin(configuration: .init(logOptions: .verbose))])
+        let networkService = NetworkManager(provider: provider)
+        let homeViewModel = MovieViewModel(service: MovieService(network: networkService))
         defaultContainer.storyboardInitCompleted(ViewController.self) { r, c in
             c.viewModel = r.resolve(MovieViewModel.self)
         }

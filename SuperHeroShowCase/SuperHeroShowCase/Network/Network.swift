@@ -29,19 +29,27 @@ protocol Networkable{
     func request<T: Codable>(target: API) -> Observable<T>
 }
 
-class NetworkManager: Networkable {
+class MovieService {
     
+    let network: Networkable
     
-    var provider = MoyaProvider<API>(
-        endpointClosure: endPointMyOrganizationClousre,
-        plugins: [authMyOrganizationPlugin, NetworkLoggerPlugin(configuration: .init(logOptions: .verbose))])
-    static let shared  = NetworkManager()
+    init(network: Networkable) {
+        self.network = network
+    }
     
     func fetchPopularMovies(page: String) -> Observable<SuperHeroMovieResponse> {
-        request(target: .getSuperHeroMovies(page: page))
+        self.network.request(target: .getSuperHeroMovies(page: page))
     }
-   
+}
 
+class NetworkManager: Networkable {
+    
+    var provider: Moya.MoyaProvider<API>
+    
+    init(provider: MoyaProvider<API>) {
+        self.provider = provider
+    }
+  
     func request<T: Codable>(target: API) -> Observable<T>{
         provider.rx.request(target)
             .asObservable()
