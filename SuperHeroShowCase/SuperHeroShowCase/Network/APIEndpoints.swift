@@ -30,7 +30,7 @@ extension API: TargetType {
         case .upcoming:
             return "upcoming"
         case .getSuperHeroMovies(page: let page):
-            return "/discover/movie?include_adult=false&include_video=false&language=en-US&page=\(page)&sort_by=popularity.desc&with_keywords=9715"
+            return "/discover/movie?include_adult=false&include_video=false&language=en-US&page=\(page)&sort_by=popularity.desc&with_keywords=9715&with_original_language=en"
         }
     }
     

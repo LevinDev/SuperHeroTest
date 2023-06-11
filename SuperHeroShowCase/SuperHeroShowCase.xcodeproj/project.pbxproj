@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1625F5632A339026003DC678 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1625F5622A339026003DC678 /* MainTabBarController.swift */; };
+		1625F5652A33945F003DC678 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1625F5642A33945F003DC678 /* HeroViewController.swift */; };
+		1625F5682A339BF3003DC678 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1625F5672A339BF3003DC678 /* Lottie */; };
+		1625F56A2A339E95003DC678 /* batman.json in Resources */ = {isa = PBXBuildFile; fileRef = 1625F5692A339E95003DC678 /* batman.json */; };
+		1625F56C2A339F58003DC678 /* BatmanWhite.json in Resources */ = {isa = PBXBuildFile; fileRef = 1625F56B2A339F58003DC678 /* BatmanWhite.json */; };
+		1625F56F2A3449AF003DC678 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 1625F56E2A3449AF003DC678 /* RxRelay */; };
+		1625F5742A345983003DC678 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1625F5732A345983003DC678 /* UIView+Extension.swift */; };
+		1625F5772A345C54003DC678 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1625F5762A345C54003DC678 /* Kingfisher */; };
+		1625F5792A34611E003DC678 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1625F5782A34611E003DC678 /* MovieDetailViewController.swift */; };
+		1625F57C2A346820003DC678 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1625F57B2A346820003DC678 /* RxCocoa */; };
+		1625F57F2A34F08B003DC678 /* ScrollCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1625F57D2A34F08B003DC678 /* ScrollCardCollectionViewCell.xib */; };
+		1625F5802A34F08B003DC678 /* ScrollCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1625F57E2A34F08B003DC678 /* ScrollCardCollectionViewCell.swift */; };
+		1625F5822A34F0EE003DC678 /* ScrollCardCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1625F5812A34F0EE003DC678 /* ScrollCardCollectionViewLayout.swift */; };
 		16AE2B402A330A6E0051FD05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AE2B3F2A330A6E0051FD05 /* AppDelegate.swift */; };
 		16AE2B422A330A6E0051FD05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AE2B412A330A6E0051FD05 /* SceneDelegate.swift */; };
 		16AE2B442A330A6E0051FD05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AE2B432A330A6E0051FD05 /* ViewController.swift */; };
@@ -42,6 +55,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1625F5622A339026003DC678 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		1625F5642A33945F003DC678 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
+		1625F5692A339E95003DC678 /* batman.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = batman.json; sourceTree = "<group>"; };
+		1625F56B2A339F58003DC678 /* BatmanWhite.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BatmanWhite.json; sourceTree = "<group>"; };
+		1625F5732A345983003DC678 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1625F5782A34611E003DC678 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		1625F57D2A34F08B003DC678 /* ScrollCardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		1625F57E2A34F08B003DC678 /* ScrollCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		1625F5812A34F0EE003DC678 /* ScrollCardCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollCardCollectionViewLayout.swift; sourceTree = "<group>"; };
 		16AE2B3C2A330A6E0051FD05 /* SuperHeroShowCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHeroShowCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AE2B3F2A330A6E0051FD05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16AE2B412A330A6E0051FD05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,8 +88,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1625F57C2A346820003DC678 /* RxCocoa in Frameworks */,
 				16AE2B732A3310320051FD05 /* RxMoya in Frameworks */,
 				16AE2B712A3310310051FD05 /* Moya in Frameworks */,
+				1625F56F2A3449AF003DC678 /* RxRelay in Frameworks */,
+				1625F5682A339BF3003DC678 /* Lottie in Frameworks */,
+				1625F5772A345C54003DC678 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +114,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1625F57A2A346820003DC678 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		16AE2B332A330A6E0051FD05 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +128,7 @@
 				16AE2B552A330A720051FD05 /* SuperHeroShowCaseTests */,
 				16AE2B5F2A330A720051FD05 /* SuperHeroShowCaseUITests */,
 				16AE2B3D2A330A6E0051FD05 /* Products */,
+				1625F57A2A346820003DC678 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +145,8 @@
 		16AE2B3E2A330A6E0051FD05 /* SuperHeroShowCase */ = {
 			isa = PBXGroup;
 			children = (
+				1625F5692A339E95003DC678 /* batman.json */,
+				1625F56B2A339F58003DC678 /* BatmanWhite.json */,
 				16AE2B792A33173E0051FD05 /* App */,
 				16AE2B782A3315530051FD05 /* Network */,
 				16AE2B7E2A336D880051FD05 /* Models */,
@@ -118,6 +154,7 @@
 				16AE2B762A3315380051FD05 /* View */,
 				16AE2B752A33152A0051FD05 /* ViewController */,
 				16AE2B742A3315190051FD05 /* Model */,
+				1625F5732A345983003DC678 /* UIView+Extension.swift */,
 				16AE2B432A330A6E0051FD05 /* ViewController.swift */,
 				16AE2B452A330A6E0051FD05 /* Main.storyboard */,
 				16AE2B482A330A720051FD05 /* Assets.xcassets */,
@@ -154,6 +191,8 @@
 		16AE2B752A33152A0051FD05 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1625F5642A33945F003DC678 /* HeroViewController.swift */,
+				1625F5782A34611E003DC678 /* MovieDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -161,6 +200,9 @@
 		16AE2B762A3315380051FD05 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1625F5812A34F0EE003DC678 /* ScrollCardCollectionViewLayout.swift */,
+				1625F57E2A34F08B003DC678 /* ScrollCardCollectionViewCell.swift */,
+				1625F57D2A34F08B003DC678 /* ScrollCardCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +229,7 @@
 				16AE2B3F2A330A6E0051FD05 /* AppDelegate.swift */,
 				16AE2B412A330A6E0051FD05 /* SceneDelegate.swift */,
 				16AE2B7A2A335EDE0051FD05 /* AppConfiguration.swift */,
+				1625F5622A339026003DC678 /* MainTabBarController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -218,6 +261,10 @@
 			packageProductDependencies = (
 				16AE2B702A3310310051FD05 /* Moya */,
 				16AE2B722A3310320051FD05 /* RxMoya */,
+				1625F5672A339BF3003DC678 /* Lottie */,
+				1625F56E2A3449AF003DC678 /* RxRelay */,
+				1625F5762A345C54003DC678 /* Kingfisher */,
+				1625F57B2A346820003DC678 /* RxCocoa */,
 			);
 			productName = SuperHeroShowCase;
 			productReference = 16AE2B3C2A330A6E0051FD05 /* SuperHeroShowCase.app */;
@@ -293,6 +340,9 @@
 			mainGroup = 16AE2B332A330A6E0051FD05;
 			packageReferences = (
 				16AE2B6F2A3310310051FD05 /* XCRemoteSwiftPackageReference "Moya" */,
+				1625F5662A339BF3003DC678 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				1625F56D2A3449AF003DC678 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				1625F5752A345C54003DC678 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 16AE2B3D2A330A6E0051FD05 /* Products */;
 			projectDirPath = "";
@@ -312,6 +362,9 @@
 			files = (
 				16AE2B4C2A330A720051FD05 /* LaunchScreen.storyboard in Resources */,
 				16AE2B492A330A720051FD05 /* Assets.xcassets in Resources */,
+				1625F57F2A34F08B003DC678 /* ScrollCardCollectionViewCell.xib in Resources */,
+				1625F56C2A339F58003DC678 /* BatmanWhite.json in Resources */,
+				1625F56A2A339E95003DC678 /* batman.json in Resources */,
 				16AE2B472A330A6E0051FD05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,12 +390,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1625F5822A34F0EE003DC678 /* ScrollCardCollectionViewLayout.swift in Sources */,
 				16AE2B7D2A3366DB0051FD05 /* APIEndpoints.swift in Sources */,
+				1625F5802A34F08B003DC678 /* ScrollCardCollectionViewCell.swift in Sources */,
 				16AE2B442A330A6E0051FD05 /* ViewController.swift in Sources */,
+				1625F5632A339026003DC678 /* MainTabBarController.swift in Sources */,
 				16AE2B402A330A6E0051FD05 /* AppDelegate.swift in Sources */,
+				1625F5652A33945F003DC678 /* HeroViewController.swift in Sources */,
 				16AE2B7B2A335EDE0051FD05 /* AppConfiguration.swift in Sources */,
 				16AE2B802A336DD50051FD05 /* MovieModels.swift in Sources */,
 				16AE2B822A336EA50051FD05 /* Network.swift in Sources */,
+				1625F5742A345983003DC678 /* UIView+Extension.swift in Sources */,
+				1625F5792A34611E003DC678 /* MovieDetailViewController.swift in Sources */,
 				16AE2B422A330A6E0051FD05 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,6 +770,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1625F5662A339BF3003DC678 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		1625F56D2A3449AF003DC678 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		1625F5752A345C54003DC678 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		16AE2B6F2A3310310051FD05 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -722,6 +805,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1625F5672A339BF3003DC678 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1625F5662A339BF3003DC678 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+		1625F56E2A3449AF003DC678 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1625F56D2A3449AF003DC678 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		1625F5762A345C54003DC678 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1625F5752A345C54003DC678 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		1625F57B2A346820003DC678 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1625F56D2A3449AF003DC678 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
 		16AE2B702A3310310051FD05 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 16AE2B6F2A3310310051FD05 /* XCRemoteSwiftPackageReference "Moya" */;

@@ -47,7 +47,7 @@ class NetworkManager: Networkable {
             .asObservable()
             .debug()
             .map{ (result) in
-                print(String(data: result.data, encoding: .nonLossyASCII) )
+                //print(String(data: result.data, encoding: .nonLossyASCII) )
                 return try result.map ( T.self )
             }
             .catch { error in
