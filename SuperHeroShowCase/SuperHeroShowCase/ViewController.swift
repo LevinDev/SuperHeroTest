@@ -20,7 +20,7 @@ final class ViewController: UIViewController {
     @IBOutlet private var posterBtn: UIButton!
     
     private var animationView: LottieAnimationView?
-    let viewModel = HomeViewModel()
+    var viewModel:HomeViewModel!
     let bag = DisposeBag()
 
     override func viewDidLoad() {
@@ -78,17 +78,6 @@ final class ViewController: UIViewController {
             self.moviesListContainer.hideLoader()
         }
     }
-    
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "detail", let detailVc = segue.destination as? MovieDetailViewController {
-            detailVc.viewModel = self.viewModel
-        }
-    }
-  
 
 }
 
@@ -117,10 +106,11 @@ class HomeViewModel {
           }
     }
     
-    func generateRandomMovie(hero: HeroName) {
+    func generateRandomMovie(hero: HeroName) -> movie? {
         if let random = self.movies.value.filter({$0.title.localizedCaseInsensitiveContains(hero.name)}).randomElement() {
-            print(random)
+            return random
         }
+        return nil
     }
 }
 
@@ -169,14 +159,5 @@ extension movie {
             return URL(string: "https://image.tmdb.org/t/p/w500\(self.backdropPath!)")
         }
         return nil
-    }
-}
-
-extension String {
-    func contains(find: String) -> Bool{
-        return self.range(of: find) != nil
-    }
-    func containsIgnoringCase(find: String) -> Bool{
-        return self.range(of: find, options: .caseInsensitive) != nil
     }
 }

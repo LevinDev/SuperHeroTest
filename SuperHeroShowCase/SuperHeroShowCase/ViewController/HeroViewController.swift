@@ -12,7 +12,7 @@ class HeroViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var viewModel = HomeViewModel()
+    var viewModel:HomeViewModel!
     var bag = DisposeBag()
     
     fileprivate var cardSize: CGSize {
@@ -23,9 +23,9 @@ class HeroViewController: UIViewController {
     }
        
     override func viewDidLoad() {
-        if let nav = self.tabBarController?.viewControllers?.first as? UINavigationController, let vc =  nav.topViewController as? ViewController {
-            self.viewModel = vc.viewModel
-        }
+//        if let nav = self.tabBarController?.viewControllers?.first as? UINavigationController, let vc =  nav.topViewController as? ViewController {
+//            self.viewModel = vc.viewModel
+//        }
 
         super.viewDidLoad()
         self.navigationItem.title = "Choose Your Hero"
@@ -71,6 +71,8 @@ extension HeroViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedHero = HeroName.getHeros()[indexPath.row]
-        self.viewModel.generateRandomMovie(hero: selectedHero)
+        if let random = self.viewModel.generateRandomMovie(hero: selectedHero) {
+            self.performSegue(withIdentifier: "heroMovie", sender: nil)
+        }
     }
 }

@@ -18,7 +18,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet private var descriptionlabel: UILabel!
     @IBOutlet private var shuffleBtn: UIButton!
     
-    var viewModel = HomeViewModel()
+    var viewModel:HomeViewModel!
     let bag = DisposeBag()
     
     override func viewDidLoad() {

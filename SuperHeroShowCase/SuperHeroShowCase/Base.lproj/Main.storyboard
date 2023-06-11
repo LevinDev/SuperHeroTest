@@ -58,6 +58,7 @@
                     <navigationItem key="navigationItem" id="KLc-0r-8WY"/>
                     <connections>
                         <outlet property="collectionView" destination="WNl-Kv-AMq" id="ZPp-Lo-6el"/>
+                        <segue destination="wu2-g3-Tpf" kind="show" identifier="heroMovie" id="EHY-Ye-HbE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h86-F6-tAC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -301,6 +302,9 @@
             <point key="canvasLocation" x="522.90076335877859" y="248.59154929577466"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EHY-Ye-HbE"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="film" catalog="system" width="128" height="93"/>
         <image name="film.fill" catalog="system" width="128" height="93"/>
