@@ -156,7 +156,6 @@
 				16AE2B772A3315450051FD05 /* ViewModel */,
 				16AE2B762A3315380051FD05 /* View */,
 				16AE2B752A33152A0051FD05 /* ViewController */,
-				16AE2B742A3315190051FD05 /* Model */,
 				1625F5732A345983003DC678 /* UIView+Extension.swift */,
 				16AE2B452A330A6E0051FD05 /* Main.storyboard */,
 				16AE2B482A330A720051FD05 /* Assets.xcassets */,
@@ -181,13 +180,6 @@
 				16AE2B622A330A720051FD05 /* SuperHeroShowCaseUITestsLaunchTests.swift */,
 			);
 			path = SuperHeroShowCaseUITests;
-			sourceTree = "<group>";
-		};
-		16AE2B742A3315190051FD05 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		16AE2B752A33152A0051FD05 /* ViewController */ = {
