@@ -10,6 +10,15 @@
 		16024E9E2A36D77500D357F7 /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16024E9D2A36D77500D357F7 /* NetworkMock.swift */; };
 		16024EA02A36D79F00D357F7 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AE2B812A336EA50051FD05 /* Network.swift */; };
 		16024EA12A36D7DC00D357F7 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AE2B7C2A3366DB0051FD05 /* APIEndpoints.swift */; };
+		16024EA32A36DD4400D357F7 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 16024EA22A36DD4400D357F7 /* Moya */; };
+		16024EA52A36DD4400D357F7 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 16024EA42A36DD4400D357F7 /* ReactiveMoya */; };
+		16024EA72A36DD4400D357F7 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 16024EA62A36DD4400D357F7 /* RxMoya */; };
+		16024EA92A36DD5900D357F7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 16024EA82A36DD5900D357F7 /* RxCocoa */; };
+		16024EAB2A36DD5900D357F7 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 16024EAA2A36DD5900D357F7 /* RxRelay */; };
+		16024EAD2A36DD5900D357F7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 16024EAC2A36DD5900D357F7 /* RxSwift */; };
+		16024EAF2A36DD5900D357F7 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 16024EAE2A36DD5900D357F7 /* RxTest */; };
+		16024EB02A36DE6000D357F7 /* MovieModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AE2B7F2A336DD50051FD05 /* MovieModels.swift */; };
+		16024EB12A36E05600D357F7 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AE2B7A2A335EDE0051FD05 /* AppConfiguration.swift */; };
 		1625F5652A33945F003DC678 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1625F5642A33945F003DC678 /* HeroViewController.swift */; };
 		1625F5682A339BF3003DC678 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1625F5672A339BF3003DC678 /* Lottie */; };
 		1625F56C2A339F58003DC678 /* BatmanWhite.json in Resources */ = {isa = PBXBuildFile; fileRef = 1625F56B2A339F58003DC678 /* BatmanWhite.json */; };
@@ -97,6 +106,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16024EAF2A36DD5900D357F7 /* RxTest in Frameworks */,
+				16024EAD2A36DD5900D357F7 /* RxSwift in Frameworks */,
+				16024EAB2A36DD5900D357F7 /* RxRelay in Frameworks */,
+				16024EA72A36DD4400D357F7 /* RxMoya in Frameworks */,
+				16024EA32A36DD4400D357F7 /* Moya in Frameworks */,
+				16024EA92A36DD5900D357F7 /* RxCocoa in Frameworks */,
+				16024EA52A36DD4400D357F7 /* ReactiveMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +281,15 @@
 				16AE2B542A330A720051FD05 /* PBXTargetDependency */,
 			);
 			name = SuperHeroShowCaseTests;
+			packageProductDependencies = (
+				16024EA22A36DD4400D357F7 /* Moya */,
+				16024EA42A36DD4400D357F7 /* ReactiveMoya */,
+				16024EA62A36DD4400D357F7 /* RxMoya */,
+				16024EA82A36DD5900D357F7 /* RxCocoa */,
+				16024EAA2A36DD5900D357F7 /* RxRelay */,
+				16024EAC2A36DD5900D357F7 /* RxSwift */,
+				16024EAE2A36DD5900D357F7 /* RxTest */,
+			);
 			productName = SuperHeroShowCaseTests;
 			productReference = 16AE2B522A330A720051FD05 /* SuperHeroShowCaseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -363,8 +388,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16024EB12A36E05600D357F7 /* AppConfiguration.swift in Sources */,
 				16024E9E2A36D77500D357F7 /* NetworkMock.swift in Sources */,
 				16AE2B572A330A720051FD05 /* SuperHeroShowCaseTests.swift in Sources */,
+				16024EB02A36DE6000D357F7 /* MovieModels.swift in Sources */,
 				16024EA02A36D79F00D357F7 /* Network.swift in Sources */,
 				16024EA12A36D7DC00D357F7 /* APIEndpoints.swift in Sources */,
 			);
@@ -710,6 +737,41 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		16024EA22A36DD4400D357F7 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16AE2B6F2A3310310051FD05 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		16024EA42A36DD4400D357F7 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16AE2B6F2A3310310051FD05 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		16024EA62A36DD4400D357F7 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16AE2B6F2A3310310051FD05 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		16024EA82A36DD5900D357F7 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1625F56D2A3449AF003DC678 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		16024EAA2A36DD5900D357F7 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1625F56D2A3449AF003DC678 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		16024EAC2A36DD5900D357F7 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1625F56D2A3449AF003DC678 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		16024EAE2A36DD5900D357F7 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1625F56D2A3449AF003DC678 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
 		1625F5672A339BF3003DC678 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1625F5662A339BF3003DC678 /* XCRemoteSwiftPackageReference "lottie-spm" */;

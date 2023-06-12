@@ -8,8 +8,9 @@
 import Foundation
 import Moya
 import RxSwift
+import RxCocoaRuntime
 
-class NetworkManager: Networkable {
+class NetworkManagerMock: Networkable {
     
     var provider: Moya.MoyaProvider<API>
     
@@ -18,6 +19,6 @@ class NetworkManager: Networkable {
     }
   
     func request<T: Codable>(target: API) -> Observable<T>{
-        Observable.empty()
+        Observable.just(SuperHeroMovieResponse(page: 1, results: [], totalPages: 2, totalResults: 5) as! T)
     }
 }
