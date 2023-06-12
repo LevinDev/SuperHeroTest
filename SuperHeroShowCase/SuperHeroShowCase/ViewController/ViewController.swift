@@ -55,6 +55,12 @@ final class ViewController: UIViewController {
                 }
             }).disposed(by: bag)
         
+        viewModel.alert
+            .subscribe(onNext: { message in
+                self.showAlert(alertText: "Error", alertMessage: message)
+            }).disposed(by: bag)
+        
+        
         viewModel.fetchSuperHeroMovies()
         
         self.posterBtn.rx.tap.subscribe(onNext: { _ in

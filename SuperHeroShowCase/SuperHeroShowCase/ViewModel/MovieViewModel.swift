@@ -19,6 +19,7 @@ class MovieViewModel {
     var movies = BehaviorRelay<[movie]>(value: [])
     var randomSelectedMovie = BehaviorRelay<movie?>(value: .none)
     var loader = PublishRelay<Bool>()
+    var alert =  PublishRelay<String>()
     
     func fetchSuperHeroMovies() {
         self.loader.accept(true)
@@ -34,6 +35,7 @@ class MovieViewModel {
         allMovies.append(contentsOf: three.results)
         self.movies.accept(allMovies)
           } onError: { error in
+              self.alert.accept(error.localizedDescription)
               self.loader.accept(false)
           }
     }
